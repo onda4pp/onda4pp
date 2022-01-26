@@ -20,11 +20,10 @@ public class Tema {
 	@Size(min = 5, max = 50, message = "O atributo título deve conter no mínimo 05 e no máximo 50 caracteres")
 	private String titulo;
 	
-	@NotNull (message = "O atributo título é Obrigatório!")
-	@Size(min = 10, max = 255, message = "O atributo título deve conter no mínimo 10 e no máximo 255 caracteres")
+	@NotNull (message = "O atributo descrição é Obrigatório!")
+	@Size(min = 10, max = 255, message = "O atributo descrição deve conter no mínimo 10 e no máximo 255 caracteres")
 	private String descricao;
 	
-	//@NotNull (message = "Podemos deixar este campo opcional?")
 	@Size(min = 10, max = 255)
 	private String imagem;
 

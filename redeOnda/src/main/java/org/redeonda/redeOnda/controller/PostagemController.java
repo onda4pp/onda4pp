@@ -5,9 +5,7 @@ import java.util.List;
 import javax.validation.Valid;
 
 import org.redeonda.redeOnda.model.Postagem;
-import org.redeonda.redeOnda.model.Tema;
 import org.redeonda.redeOnda.repository.PostagemRepository;
-import org.redeonda.redeOnda.repository.TemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,6 +30,11 @@ public class PostagemController {
 	@GetMapping
 	public ResponseEntity<List<Postagem>> getAllPostagem() {
 		return ResponseEntity.ok(postagemRepository.findAll());
+	}
+	
+	@GetMapping("/titulo/{titulo}")
+	public ResponseEntity<List<Postagem>> getByTitulo(@PathVariable String titulo) {
+		return ResponseEntity.ok(postagemRepository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
 	@GetMapping("/texto/{texto}")
@@ -66,7 +69,6 @@ public class PostagemController {
 					return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
 				})
 				.orElse(ResponseEntity.notFound().build());
-	
 	}
 
 }

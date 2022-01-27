@@ -14,6 +14,8 @@ import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+
+
 @Entity
 @Table(name = "tb_tema")
 public class Tema {
@@ -77,9 +79,6 @@ public class Tema {
 	public void setPostagem(List<Postagem> postagem) {
 		this.postagem = postagem;
 	}
-
-	
-	
 	
 	
 }

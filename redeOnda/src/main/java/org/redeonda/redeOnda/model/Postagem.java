@@ -34,7 +34,7 @@ public class Postagem {
 	private String texto;
 	
 	@NotNull (message = "O atributo avaliação é Obrigatório!")
-	//@Size(min = 5, max = 1000 , message = "O atributo avaliação deve conter no mínimo 05 e no máximo 1000 caracteres")
+	@Size(min = 1, max = 5 , message = "O atributo avaliação é um double de 0-5")
 	private double avaliacao;
 	
 	@Temporal (TemporalType.TIMESTAMP)
@@ -51,6 +51,9 @@ public class Postagem {
 	@JsonIgnoreProperties("postagem")
     private Tema tema;
 	
+	@ManyToOne
+	@JsonIgnoreProperties("postagem")
+    private Tema usuario;
 	
 	public long getId_postagem() {
 		return id_postagem;
@@ -114,6 +117,14 @@ public class Postagem {
 
 	public void setTema(Tema tema) {
 		this.tema = tema;
+	}
+
+	public Tema getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Tema usuario) {
+		this.usuario = usuario;
 	}
 	
 	

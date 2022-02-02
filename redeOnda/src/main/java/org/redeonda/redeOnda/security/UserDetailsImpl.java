@@ -17,9 +17,9 @@ private static final long serialVersionUID = 1L;
 	private List<GrantedAuthority>authorities;
 	
 	
-	public UserDetailsImpl (Usuario usuario) {
-		this.userName = usuario.getUsuario();
-		this.password = usuario.getSenha();
+	public UserDetailsImpl (Usuario user) {
+		this.userName = user.getUsuario();
+		this.password = user.getSenha();
 	}
 		
 	public UserDetailsImpl() {}

@@ -32,12 +32,8 @@ public class Usuario {
 	private String usuario;
 
 	@NotNull(message = "O atributo senha é Obrigatório!")
-	@Size(min = 6, max = 20, message = "O atributo título deve conter no mínimo 06 e no máximo 20 caracteres")
+	@Size(min = 6, message = "O atributo senha deve conter no mínimo 06 caracteres")
 	private String senha;
-
-//	@NotNull(message = "O atributo email é Obrigatório!")
-//	@Email(message = "O atributo email deve conter um email valido!!!")
-//	private String email;
 
 	private String foto;
 	

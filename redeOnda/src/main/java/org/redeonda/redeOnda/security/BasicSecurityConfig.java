@@ -50,13 +50,13 @@ public class BasicSecurityConfig extends WebSecurityConfigurerAdapter {
 		
 	}
 
-	public UserDetailsService getUsuarioDetailsService() {
-		return userDetailsService();
-	}
-
-	public void setUsuarioDetailsService(UserDetailsService userDetailsService) {
-		this.userDetailsService = userDetailsService;
-	}
+//	public UserDetailsService getUsuarioDetailsService() {
+//		return userDetailsService();
+//	}
+//
+//	public void setUsuarioDetailsService(UserDetailsService userDetailsService) {
+//		this.userDetailsService = userDetailsService;
+//	}
 	
 	
 }
